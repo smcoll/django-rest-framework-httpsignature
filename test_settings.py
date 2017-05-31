@@ -12,6 +12,4 @@ INSTALLED_APPS = (
     'rest_framework_httpsignature',
 )
 
-ROOT_URLCONF = 'rest_framework_httpsignature.tests'
-
 SECRET_KEY = 'MY PRIVATE SECRET'
