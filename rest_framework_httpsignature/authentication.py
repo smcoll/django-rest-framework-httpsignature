@@ -1,3 +1,5 @@
+from __future__ import unicode_literals
+
 from rest_framework import authentication
 from rest_framework import exceptions
 from httpsig import HeaderSigner

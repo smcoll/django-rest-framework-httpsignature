@@ -1,3 +1,5 @@
+from __future__ import unicode_literals
+
 from django.test import SimpleTestCase, TestCase, RequestFactory
 from django.contrib.auth import get_user_model
 from rest_framework_httpsignature.authentication import SignatureAuthentication
@@ -137,7 +139,7 @@ class BuildSignatureTestCase(SimpleTestCase):
         signature_string = self.auth.build_signature(
             self.KEYID, SECRET, req)
         signature = re.match(
-            '.*signature="(.+)",?.*', signature_string).group(1)
+            r'.*signature="(.+)",?.*', signature_string).group(1)
         self.assertEqual(expected_signature, signature)
 
 
